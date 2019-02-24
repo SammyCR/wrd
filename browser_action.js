@@ -77,8 +77,8 @@ function sendmessage(){
 	//var content = JSON.stringify({"message": document.getElementById("settings").value}); //ORIGINAL MESSAGE TO SEND
 
 	$.ajax({
-  	url: "http://localhost:8000",
-  	//url: "http://949d4091.ngrok.io/", //Enter the url of the localhost or the tunnel's url
+  	//url: "http://localhost:8000",
+  	url: " http://d64df539.ngrok.io", //Enter the url of the localhost or the tunnel's url
   	type: "POST",
   	data: content,
   	success: function(d,status,XHR){
@@ -87,8 +87,8 @@ function sendmessage(){
   })}
   function getmessage(){
   	$.ajax({
-  		url: "http://localhost:8000",
-  		//url: "http://949d4091.ngrok.io/", //Enter the url of the localhost or the tunnel's url
+  		//url: "http://localhost:8000",
+  		url: " http://d64df539.ngrok.io", //Enter the url of the localhost or the tunnel's url
         type: "GET",
         crossDomain: true,
   		success: function(d,status,XHR){
