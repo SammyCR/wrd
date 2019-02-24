@@ -38,7 +38,7 @@ body{
     border-color: black;
     margin-bottom: 10px;
     width: 200px;
-    height: 75px;
+    height: 100px;
     margin-left: 10px;
     padding-left: 5px;
     background-color: white;
@@ -51,4 +51,7 @@ body{
 }
 #messageDiv{
     margin-bottom: 90px;
+}
+.cat{
+    color: gray;
 }

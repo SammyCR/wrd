@@ -58,7 +58,10 @@ function sendmessage(){
 
 	var nameString = document.getElementById("name").value;
 
-	var nameAndMessage = nameString + ": " + originalString;
+	var catSelect = document.getElementById("catSelector")
+	var catValue = catSelect.options[catSelect.selectedIndex] .value;
+
+	var nameAndMessage = nameString + ": " + originalString + ":" + catValue;
 
 	var lenthOfString = nameAndMessage.length;
 
@@ -107,29 +110,35 @@ function sendmessage(){
 			console.log(nameVar)
 			let finalList = []
 			let pair = []
-			for (var i = 0; i < nameVar.length; i=i+2) {
-				pair = [nameVar[i], nameVar[i+1]]
+			for (var i = 0; i < nameVar.length; i=i+3) {
+				pair = [nameVar[i], nameVar[i+1], nameVar[i+2]]
 				finalList.push(pair)
 			  }
+			console.log("finalList: " + finalList)
 			document.getElementById("messageDiv").innerHTML = ''
 
 			for (var i = 0; i < finalList.length; i=i+1) {
-				console.log("finalList: " + finalList)
+				//console.log("finalList: " + finalList)
 				var newDiv = document.createElement("div")
 				newDiv.className = "individualMessageDiv"
 				var name = document.createElement("p")
 				name.className = "name"
 				var message = document.createElement("p")
 				message.className = "message"
+				var cat = document.createElement("p")
+				cat.className = "cat"
 				var nameNode = document.createTextNode(finalList[i][0])
 				var messageNode = document.createTextNode(finalList[i][1])
+				var catNode = document.createTextNode(finalList[i][2])
 				console.log("name: " + finalList[i][0])
 				console.log("message: " + finalList[i][1])
 				name.appendChild(nameNode)
 				message.appendChild(messageNode)
+				cat.appendChild(catNode)
 				var lineBreak = document.createElement("br")
 				newDiv.appendChild(name)
 				newDiv.appendChild(message)
+				newDiv.appendChild(cat)
 				newDiv.appendChild(lineBreak)
 				var mainMessageDiv = document.getElementById("messageDiv")
 				mainMessageDiv.appendChild(newDiv)

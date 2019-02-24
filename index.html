@@ -18,12 +18,18 @@
 			<!--<label for="settings" id="messages"></label>-->
 			<textarea placeholder="name" rows="1" id="name" class="postSection"></textarea>
 			<textarea placeholder="word" rows="1" id="settings" class="postSection" maxlength="10"></textarea>
+			<select class="postSection" name="Category" id="catSelector">
+				<option value="#happy">Happy</option>
+				<option value="#sad">Sad</option>
+				<option value="#funny">Funny</option>
+				<option value="#scary">Scary</option>
+			  </select>
             <button type="button" id="send" class="sendButton" class="postSection">Post</button>
         </div>
     </form>
 	<p for="settings" id="messages"></p>
 	<div id="messageDiv">
-		
+
 	</div>
 	<!--<p for="settings" id="names"></p>-->
 	<div id="status"></div>
