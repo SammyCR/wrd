@@ -20,7 +20,32 @@ body{
 .sendButton{
     background-color: yellow;
 }
+.sendButton:hover{
+    box-shadow: 2px 2px 5px gray;
+}
 #quote{
     position: fixed;
     right: 10px;
+    margin-top: 25px;
+}
+#siteName{
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.individualMessageDiv{
+    border-style: dotted;
+    border-width: 3px;
+    border-color: black;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 75px;
+    margin-left: 10px;
+    padding-left: 5px;
+    background-color: white;
+}
+.name{
+    color: blue;
+}
+.message{
+    font-size: 20px;
 }

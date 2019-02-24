@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="menu">
-		<h3 class="menu-element">WRD</h3>
+		<h2 class="menu-element" id="siteName">WRD</h2>
 		<h5 class="menu-element" id="quote">"A word's worth a thousand pictures" - us</h5>
 	</div>
 	<h6></small></h6>
@@ -17,11 +17,15 @@
 		<div class="form-group">
 			<!--<label for="settings" id="messages"></label>-->
 			<textarea placeholder="name" rows="1" id="name" class="postSection"></textarea>
-			<textarea placeholder="word" rows="1" id="settings" class="postSection"></textarea>
+			<textarea placeholder="word" rows="1" id="settings" class="postSection" maxlength="10"></textarea>
             <button type="button" id="send" class="sendButton" class="postSection">Post</button>
         </div>
     </form>
-    <p for="settings" id="messages"></p>
+	<p for="settings" id="messages"></p>
+	<div id="messageDiv">
+		
+	</div>
+	<!--<p for="settings" id="names"></p>-->
 	<div id="status"></div>
 	<script
   src="jquery-3.3.1.min.js"

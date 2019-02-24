@@ -92,11 +92,55 @@ function sendmessage(){
         type: "GET",
         crossDomain: true,
   		success: function(d,status,XHR){
+			console.log(d)
   			var u = d.slice(1, -1) //Take off the brackets
   			var q = u.replace(/['"]+/g, '') //takes off the quotation marks
-  			var r = q.split(",").join("<br />") //Break the array at commas
-  			var f = r.replace(/[~]+/g, '') //gets rid of the ~ character
-            document.getElementById("messages").innerHTML = f //originally d
+  			var r = q.split(",").join(":") //Break the array at commas
+			var f = r.replace(/[~]+/g, '') //gets rid of the ~ character
+			console.log(f)
+			var nameVar = f.split(":")
+			console.log(nameVar)
+			let finalList = []
+			let pair = []
+			for (var i = 0; i < nameVar.length; i=i+2) {
+				pair = [nameVar[i], nameVar[i+1]]
+				finalList.push(pair)
+			  }
+			document.getElementById("messageDiv").innerHTML = ''
+
+			for (var i = 0; i < finalList.length; i=i+1) {
+				console.log("finalList: " + finalList)
+				var newDiv = document.createElement("div")
+				newDiv.className = "individualMessageDiv"
+				var name = document.createElement("p")
+				name.className = "name"
+				var message = document.createElement("p")
+				message.className = "message"
+				var nameNode = document.createTextNode(finalList[i][0])
+				var messageNode = document.createTextNode(finalList[i][1])
+				console.log("name: " + finalList[i][0])
+				console.log("message: " + finalList[i][1])
+				name.appendChild(nameNode)
+				message.appendChild(messageNode)
+				var lineBreak = document.createElement("br")
+				newDiv.appendChild(name)
+				newDiv.appendChild(message)
+				newDiv.appendChild(lineBreak)
+				var mainMessageDiv = document.getElementById("messageDiv")
+				mainMessageDiv.appendChild(newDiv)
+
+			}
+			
+			/*
+			var newMessage = document.createElement("p")
+			var node = document.createTextNode("Test HTML p from JavaScript")
+			newMessage.appendChild(node)
+			var mainMessageDiv = document.getElementById("messageDiv")
+			mainMessageDiv.appendChild(newMessage)
+			*/
+			//document.getElementById("messages").innerHTML = finalList //originally f
+			
+			//document.getElementById("names").innerHTML = nameVar
             console.log("success running");
  		}
   	
