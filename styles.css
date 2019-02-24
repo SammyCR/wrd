@@ -1,0 +1,22 @@
+body{
+    background: repeating-linear-gradient(white, white 20px, rgb(255, 255, 169) 20px, rgb(255, 255, 169) 25px);
+}
+.form-group{
+    margin-bottom: 0px;
+    display: flex;
+}
+.postSection{
+    margin-right: 10px;
+}
+.menu{
+    position: fixed;
+    bottom: 0px;
+    background-color: yellow;
+    width: 100%;
+}
+.menu-element{
+    display: inline-block;
+}
+.sendButton{
+    background-color: yellow;
+}

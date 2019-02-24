@@ -4,19 +4,21 @@
 	
 	<!-- Latest compiled and minified Javascript -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="browser_action.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h3>WRD</h3>
-    <h5>"A word's worth a thousand pictures" - us</h5>
+	<div class="menu">
+		<h3 class="menu-element">WRD</h3>
+		<h5 class="menu-element">"A word's worth a thousand pictures" - us</h5>
+	</div>
 	<h6></small></h6>
 
 	<form id="form">
 		<div class="form-group">
 			<!--<label for="settings" id="messages"></label>-->
-			<textarea placeholder="name" rows="1" id="name"></textarea>
-			<textarea placeholder="word" rows="1" id="settings"></textarea>
-            <button type="button" id="send">Send</button>
+			<textarea placeholder="name" rows="1" id="name" class="postSection"></textarea>
+			<textarea placeholder="word" rows="1" id="settings" class="postSection"></textarea>
+            <button type="button" id="send" class="sendButton" class="postSection">Post</button>
         </div>
     </form>
     <p for="settings" id="messages"></p>
