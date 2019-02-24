@@ -93,8 +93,13 @@ function sendmessage(){
         crossDomain: true,
   		success: function(d,status,XHR){
 			console.log(d)
-  			var u = d.slice(1, -1) //Take off the brackets
-  			var q = u.replace(/['"]+/g, '') //takes off the quotation marks
+			var arrD = JSON.parse(d)
+			var revD = arrD.reverse()
+			console.log(revD)
+			console.log(revD)
+			strD = revD.toString()
+  			//var u = strD.slice(1, -1) //Take off the brackets
+  			var q = strD.replace(/['"]+/g, '') //takes off the quotation marks
   			var r = q.split(",").join(":") //Break the array at commas
 			var f = r.replace(/[~]+/g, '') //gets rid of the ~ character
 			console.log(f)

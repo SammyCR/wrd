@@ -49,3 +49,6 @@ body{
 .message{
     font-size: 20px;
 }
+#messageDiv{
+    margin-bottom: 90px;
+}
