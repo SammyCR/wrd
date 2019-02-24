@@ -61,7 +61,7 @@ body {
 }
 .sendButton:hover {
   transform: scale(1.2, 1.2);
-  color: white ;
+  color: black;
 
 }
 .sendButton:hover::after{
