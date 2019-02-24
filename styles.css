@@ -1,5 +1,5 @@
 body{
-    background: repeating-linear-gradient(white, white 20px, rgb(255, 255, 169) 20px, rgb(255, 255, 169) 25px);
+    background: repeating-linear-gradient(white, white 20px, rgb(255, 255, 195) 20px, rgb(255, 255, 195) 25px);
 }
 .form-group{
     margin-bottom: 0px;
@@ -19,4 +19,8 @@ body{
 }
 .sendButton{
     background-color: yellow;
+}
+#quote{
+    position: fixed;
+    right: 10px;
 }
